@@ -60,12 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 const DividerBar = () => {
-  const [sortedData, setSortedData] = useState(columnsRawData);
-
-  const handleSortClick = () => {
-    const sortedColumns = [...columnsRawData].sort((a, b) => a.priority - b.priority);
-    setSortedData(sortedColumns);
-  };
+  
   return (
     <div>
       <Grid
@@ -119,7 +114,6 @@ const DividerBar = () => {
                   backgroundColor: "#eee",
                 },
               }}
-              onClick={handleSortClick}
             >
               Sort
             </Button>
@@ -131,7 +125,6 @@ const DividerBar = () => {
                   backgroundColor: "#eee",
                 },
               }}
-              onClick={handleSortClick}
             >
               Filter
             </Button>

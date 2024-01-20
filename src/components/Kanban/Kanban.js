@@ -8,7 +8,7 @@ import AddColumn from "./AddColumn";
 import AddIcon from '@mui/icons-material/Add';
 import { Menu, MenuItem } from "@mui/material";
 
-const Kanban = ({ sortColumns }) => {
+const Kanban = () => {
   const [openColModal, setOpenColModal] = useState(false);
   const [open, setOpen] = useState(false);
   const [columns, setColumns] = useState(

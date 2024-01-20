@@ -6,21 +6,21 @@ const AddColumn = (props) => {
   const [title, setTitle] = useState("");
   const [priority, setPriority] = useState("");
   const [priorityID, setPriorityID] = useState();
-  const idColumn = props.columnData;
+  
   const handleChange = (e) => {
     const newValue = e.target.value;
     setPriorityID(newValue);
 
-    if (newValue == 0) {
+    if (newValue === 0) {
       setPriority("No Priority");
     }
-    else if(newValue == 1){
+    else if(newValue === 1){
       setPriority("Low");
     }
-    else if(newValue == 2){
+    else if(newValue === 2){
       setPriority("Medium");
     }
-    else if(newValue == 3){
+    else if(newValue === 3){
       setPriority("High");
     }
     else{
