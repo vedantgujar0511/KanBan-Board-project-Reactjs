@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Typography, CssBaseline } from "@mui/material";
+import Layout from "./layout/Layout";
+import DividerBar from "../src/components/DivideBar";
+import Kanban from "./components/Kanban/Kanban";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Layout>
+        <Typography variant="h4" sx={{ fontWeight: "bold", my: 7 }}>
+          <img
+            src={require("./assets/calender_icon.png")}
+            style={{
+              width: "4rem",
+              marginBottom: "-1.2rem",
+            }}
+            alt="mySvgImage"
+          />
+          Kanban Board
+        </Typography>
+        <DividerBar />
+        <Kanban />
+      </Layout>
+    </>
   );
 }
 
